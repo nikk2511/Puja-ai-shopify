@@ -1,0 +1,227 @@
+# Environment files
+.env
+.env.local
+.env.production
+.env.test
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Next.js
+.next/
+out/
+.vercel
+
+# React
+.eslintcache
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# ChromaDB data
+backend/data/chroma/
+data/chroma/
+*.db
+*.sqlite3
+
+# PDF files (keep structure but ignore content)
+backend/pdfs/*.pdf
+pdfs/*.pdf
+
+# Processed files tracking
+backend/data/processed_files.json
+data/processed_files.json
+
+# Cache directories
+.cache/
+.tmp/
+tmp/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Docker
+docker-compose.override.yml
+
+# API keys and secrets
+*.key
+*.pem
+secrets.json
+
+# Backup files
+*.bak
+*.backup
+
+# Temporary files
+*.tmp
+*.temp
+
+# Build outputs
+*.tar.gz
+*.zip
+
+# Local configuration overrides
+local_config.py
+local_settings.py
+config.local.json
+
+# Machine learning models
+*.model
+*.pkl
+*.pickle
+
+# Large files
+*.bin
+*.dat
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# Frontend specific
+.eslintrc.json
+.prettierrc
+
+# Deployment artifacts
+deployment/
+staging/
+
+# Monitoring and logs
+monitoring/
+*.access.log
+*.error.log
+
+# Performance profiling
+*.prof
+*.pstats
+
+# Documentation builds
+docs/_build/
+docs/build/
+
+# Translation files
+*.mo
+*.pot
+
+# Test artifacts
+test-results/
+coverage/
+
+# Security scanning results
+security-scan-results/
+
+# Local development overrides
+docker-compose.local.yml
+kubernetes-local/

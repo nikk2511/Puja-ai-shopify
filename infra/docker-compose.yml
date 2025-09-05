@@ -1,0 +1,54 @@
+# Docker Compose configuration for Puja AI Shopify Chatbot
+version: '3.8'
+
+services:
+  puja-ai-backend:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_EMBED_MODEL=text-embedding-3-small
+      - OPENAI_CHAT_MODEL=gpt-4o-mini
+      - CHROMA_PERSIST_DIR=/app/data/chroma
+      - CHROMA_COLLECTION_NAME=puja_books
+      - FASTAPI_HOST=0.0.0.0
+      - FASTAPI_PORT=8000
+      - API_KEY=${API_KEY}
+      - MAX_TOKENS=1500
+      - TEMPERATURE=0.0
+    volumes:
+      - chroma_data:/app/data/chroma
+      - pdf_data:/app/pdfs
+      - ../backend:/app
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Optional Redis for caching (uncomment if needed)
+  # redis:
+  #   image: redis:7-alpine
+  #   ports:
+  #     - "6379:6379"
+  #   volumes:
+  #     - redis_data:/data
+  #   restart: unless-stopped
+  #   command: redis-server --appendonly yes
+
+volumes:
+  chroma_data:
+    driver: local
+  pdf_data:
+    driver: local
+  # redis_data:
+  #   driver: local
+
+networks:
+  default:
+    name: puja-ai-network

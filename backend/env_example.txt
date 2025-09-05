@@ -1,0 +1,27 @@
+# OpenAI Configuration
+OPENAI_API_KEY=<your openai key>
+OPENAI_EMBED_MODEL=text-embedding-3-small
+OPENAI_CHAT_MODEL=gpt-4o-mini
+
+# ChromaDB Configuration
+CHROMA_PERSIST_DIR=./data/chroma
+CHROMA_COLLECTION_NAME=puja_books
+
+# FastAPI Configuration
+FASTAPI_HOST=0.0.0.0
+FASTAPI_PORT=8000
+
+# Cache Configuration (optional Redis)
+CACHE_HOST=localhost
+
+# Shopify Configuration (optional if building Shopify App proxy/auth)
+SHOPIFY_API_KEY=
+SHOPIFY_API_SECRET=
+SHOPIFY_APP_URL=https://your-app-url.example.com
+
+# API Security
+API_KEY=your-admin-api-key-here
+
+# Additional Configuration
+MAX_TOKENS=1500
+TEMPERATURE=0.0
